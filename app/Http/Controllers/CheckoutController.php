@@ -42,8 +42,10 @@ class CheckoutController extends Controller
 
       try
       {
+          $total = Cart::subtotal();
+          $totalnum = str_replace(',', '', $total);
         $charge = \Stripe\Charge::create(array(
-          "amount" => Cart::total()*100,
+          "amount" => $totalnum*100,
           "currency" => "usd",
           "description" => "Example charge",
           "source" => $token,

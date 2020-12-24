@@ -1,29 +1,29 @@
 @extends('layout.main')
 
-@section('title', 'Shirts')
+@section('title', 'Products')
 @section('content')
         <div class="row">
-            @forelse($shirts as $shirt)
+            @forelse($products as $product)
             <div class="small-3 columns">
                 <div class="item-wrapper">
                     <div class="img-wrapper">
-                        <a href="{{route('cart.addItem',$shirt->id)}}" class="button expanded add-to-cart">
+                        <a href="{{route('cart.addItem',$product->id)}}" class="button expanded add-to-cart">
                             Add to Cart
                         </a>
-                        <a href="#">
-                            <img src="{{url('images',$shirt->image)}}"/>
+                        <a href="{{route('product',$product->id)}}">
+                            <img src="{{url('images',$product->image)}}"/>
                         </a>
                     </div>
-                    <a href="{{route('shirt',$shirt->id)}}">
+                    <a href="{{route('product',$product->id)}}">
                         <h3>
-                            {{$shirt->name}}
+                            {{$product->name}}
                         </h3>
                     </a>
                     <h5>
-                        ${{$shirt->price}}
+                        ${{$product->price}}
                     </h5>
                     <p>
-                        {{$shirt->description}}
+                        {{$product->description}}
                     </p>
                 </div>
             </div>

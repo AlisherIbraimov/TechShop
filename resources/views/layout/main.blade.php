@@ -25,7 +25,7 @@
             <div class="top-bar-right">
                 <ol class="menu">
                     <li>
-                        <a href="{{route('shirts')}}">STORE</a>
+                        <a href="{{route('products')}}">STORE</a>
                     </li>
                     <li>
                         <a href="{{route('cart.index')}}">
@@ -41,7 +41,7 @@
                         </li>
                     @else
                         <li>
-                            <a href="#"><i class="fa fa-user-o fa-2x" aria-hidden="true"></i></a>
+                            <a href="/admin"><i class="fa fa-user-o fa-2x" aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="/logout"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
@@ -51,29 +51,6 @@
             </div>
         </div>
         @yield('content');
-        <!-- Footer -->
-        <br>
-{{--<footer class="footer">--}}
-{{--  <div class="row full-width">--}}
-{{--    <div class="small-12 medium-4 large-4 columns">--}}
-{{--      <i class="fi-laptop"></i>--}}
-{{--      <p>Coded with love by Jyotsna</p>--}}
-{{--    </div>--}}
-{{--    <div class="small-12 medium-4 large-4 columns">--}}
-{{--      <i class="fi-html5"></i>--}}
-{{--      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit impedit consequuntur at! Amet sed itaque nostrum, distinctio eveniet odio, id ipsam fuga quam minima cumque nobis veniam voluptates deserunt!</p>--}}
-{{--    </div>--}}
-{{--    --}}
-{{--    <div class="small-6 medium-4 large-4 columns">--}}
-{{--      <h4>Follow Me</h4>--}}
-{{--      <ul class="footer-links">--}}
-{{--        <li><a href="https://github.com/Jyotsna-Singh">GitHub</a></li>--}}
-{{--        <li><a href="#">Facebook</a></li>--}}
-{{--        <li><a href="https://twitter.com/JyoSWeb">Twitter</a></li>--}}
-{{--      <ul>--}}
-{{--    </div>--}}
-{{--  </div>--}}
-{{--</footer>--}}
 
     <script src="{{asset('dist/js/vendor/jquery.js')}}"></script>
     <script type="text/javascript"  src="https://js.stripe.com/v2/"></script>

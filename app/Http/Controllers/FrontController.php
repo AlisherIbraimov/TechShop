@@ -10,20 +10,20 @@ class FrontController extends Controller
     //
     public function index()
     {
-    	 $shirts = Product::all();
-        return view('front.home',compact('shirts'));
+    	 $products = Product::all();
+        return view('front.home',compact('products'));
     }
 
-     public function shirts()
+     public function products()
     {
-        $shirts = Product::all();
-    	return view('front.shirts',compact('shirts'));
+        $products = Product::all();
+    	return view('front.products',compact('products'));
     }
 
-    public function shirt($id, Request $request)
+    public function product($id, Request $request)
     {
-        $shirt = Product::find($id);
-    	return view('front.shirt',compact('shirt'));
+        $product = Product::find($id);
+    	return view('front.product',compact('product'));
         
     }
 }

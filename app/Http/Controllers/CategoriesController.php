@@ -85,7 +85,7 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        Category::remove($id);
+        Category::destroy($id);
         return back();
     }
 }

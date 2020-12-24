@@ -17,8 +17,8 @@ Route::get('/', function () {
 */
 
 Route::get('/', 'FrontController@index')->name('home');
-Route::get('/shirts', 'FrontController@shirts')->name('shirts');
-Route::get('/shirt/{id}', 'FrontController@shirt')->name('shirt');
+Route::get('/products', 'FrontController@products')->name('products');
+Route::get('/product/{id}', 'FrontController@product')->name('product');
 
 Auth::routes();
 
